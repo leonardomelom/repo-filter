@@ -73,14 +73,7 @@ export default function App() {
        className='flex md:flex-row gap-2 justify-center items-center mt-2 sm: flex-col'
       >
         
-      <input
-        type="text"
-        name="search"
-        className="p-4 my-4 border border-blue-300  rounded focus:border-blue-500"
-        placeholder="🔍 Buscar"
-        onChange={e => setSearch(e.target.value)}
-        value={search}
-      />
+      
       <button
       className='flex flex-row gap-2 justify-center items-center border border-blue-500 rounded p-4'
       onClick={handleOrderRepos}
@@ -94,7 +87,7 @@ export default function App() {
         <Calendar size={24} /> Order by commit 
       </button>
       </div>
-        <ul className=" font-sans text-lg text-gray-400 uppercase mb-2">
+        <ul className=" font-sans text-lg text-gray-400 uppercase mb-2 mt-4">
         <ul className=" font-sans text-lg uppercase ">
           {filter.map(repo => (
             <li className="mb-2" key={repo.name}>
@@ -106,7 +99,10 @@ export default function App() {
       </ul>
       </div>
     )
-  }
+  } 
+
+
+ 
   return (
     <div className=" flex justify-center items-center flex-col pt-20">
       <h1 className="text-3xl font-bold uppercase">My Repositories</h1>
@@ -186,5 +182,5 @@ export default function App() {
         </ul>
       )}
     </div>
-  )
-}
+  )}
+
